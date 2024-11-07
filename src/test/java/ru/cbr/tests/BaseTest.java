@@ -4,10 +4,15 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeAll;
+import ru.cbr.pages.FinOrgPage;
+import ru.cbr.pages.components.OffsetMenu;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class BaseTest {
+
+    FinOrgPage finOrgPage = new FinOrgPage();
+    OffsetMenu offsetMenu = new OffsetMenu();
 
     SelenideElement popupCookies = $(".popup-cookies");
     SelenideElement popupCookiesConfirmButton = $(".popup-cookies .btn");
