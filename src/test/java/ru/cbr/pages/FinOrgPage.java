@@ -29,6 +29,13 @@ public class FinOrgPage {
         return this;
     }
 
+    public FinOrgPage selectFilterRegion(String regionString) {
+        $("#ui-id-4 button").click();
+        $$(".open .filter-select_options label").find(text(regionString)).click();
+
+        return this;
+    }
+
     public FinOrgPage inputSearchPrase(String requestString) {
         $("#SearchPrase").setValue(requestString);
 
