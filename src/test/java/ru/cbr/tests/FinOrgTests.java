@@ -10,14 +10,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 import ru.cbr.models.CompanyInfo;
 import ru.cbr.models.Region;
 
-import static com.codeborne.selenide.Selenide.open;
-
 @DisplayName("Поиск организаций, участников финансового рынка")
 public class FinOrgTests extends BaseTest {
 
     @BeforeEach
     void setUp() {
-        open("/finorg");
+        finOrgPage.openPage();
     }
 
     @ValueSource(strings = {
